@@ -2,24 +2,41 @@
 <html lang="en">
     <head>
         <title>coffee & code ⁂</title>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <meta name="title" content="coffee & code ⁂" />
         <meta name="description" content="SOCRATICA Chapter of Philadelphia" />
         <meta name="theme-color" content="#e83b3b" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
 
-        <link rel="stylesheet" href="./global.css">
-        <link rel="stylesheet" href="./style.css">
-	</head>
+        <link rel="stylesheet" href="./global.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
     <style>
-        content { padding-bottom: 2em; }
-        #title { padding-top: 0.5em; display: inline-block; line-height: 1em; text-align: center;}
-        #title span { display: inline-block; animation: bounce 0.3s ease forwards; opacity: 0;}
-        #subtitle { font-size: small; transition: color 0.2s ease-in-out; cursor: pointer;}
-        #subtitle:hover { color: var(--accentify);}
+        content {
+            padding-bottom: 2em;
+        }
+        #title {
+            padding-top: 0.5em;
+            display: inline-block;
+            line-height: 1em;
+            text-align: center;
+        }
+        #title span {
+            display: inline-block;
+            animation: bounce 0.3s ease forwards;
+            opacity: 0;
+        }
+        #subtitle {
+            font-size: small;
+            transition: color 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        #subtitle:hover {
+            color: var(--accentify);
+        }
 
         @keyframes bounce {
             0% {
@@ -35,39 +52,61 @@
                 opacity: 1;
             }
         }
-                    
-        hr { opacity: .3; border-style: dashed; margin: 1em 0 1.5em 0;}
-        p { margin-top: 0.6em; margin-bottom: 0.6em; font-size: larger;}
-        .fin { color: var(--dreary); }
-        .fin a { color: var(--dreary); }
-        
+
+        hr {
+            opacity: 0.3;
+            border-style: dashed;
+            margin: 1em 0 1.5em 0;
+        }
+        p {
+            margin-top: 0.6em;
+            margin-bottom: 0.6em;
+            font-size: larger;
+        }
+        .fin {
+            color: var(--dreary);
+        }
+        .fin a {
+            color: var(--dreary);
+        }
+
         /* caption */
-        .caption { margin-top: 0; margin-left: 0.65em; user-select: none;}
-        .space > div > .caption { text-align: center; }
+        .caption {
+            margin-top: 0;
+            margin-left: 0.65em;
+            user-select: none;
+        }
+        .space > div > .caption {
+            text-align: center;
+        }
 
         /* a.button */
-        .button { display: flex; width: 12em; justify-content: center; margin: auto;}
+        .button {
+            display: flex;
+            width: 12em;
+            justify-content: center;
+            margin: auto;
+        }
         .button > a {
             transition-property: transform;
-            transition-timing-function: cubic-bezier(.4,0,.2,1);
-            transition-duration: .15s;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
 
             font-size: 1.5rem;
             line-height: 2rem;
 
-            padding: .5rem 2rem;
-            margin-top:  1rem;
-            margin-bottom:  1rem;
-
+            padding: 0.5rem 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
 
             background-color: var(--bright);
             color: var(--dark);
             text-decoration: none;
-            border-radius: .5rem;
+            border-radius: 0.5rem;
             user-select: none;
         }
 
-        .button:not(:hover) > a  {
+        .button:not(:hover) > a {
             transform: translateY(0);
         }
         .button:hover > a {
@@ -76,33 +115,47 @@
         }
 
         /* more fun image interactivity */
-        div:nth-child(odd):hover > img { transform: perspective(1000px) rotateY(-10deg);}
-        div:nth-child(even):hover > img { transform: perspective(1000px) rotateY(10deg);}
+        div:nth-child(odd):hover > img {
+            transform: perspective(1000px) rotateY(-10deg);
+        }
+        div:nth-child(even):hover > img {
+            transform: perspective(1000px) rotateY(10deg);
+        }
 
         @media all and (min-width: 800px) {
-            .space { display: flex; flex-wrap: wrap; justify-content: space-between;}
-            .space > div { margin: 0 0%; width: 50%; }
+            .space {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .space > div {
+                margin: 0 0%;
+                width: 50%;
+            }
         }
     </style>
-	<body class="midnight">
+    <body class="midnight">
         <content>
             <h1 id="title">Coffee & Code Philly ⁂</h1>
             <p id="subtitle" class="mono">📍 Capital One Café (35 S 17th St Suite A)</p>
-            <hr>
+            <hr />
 
             <p>welcome to coffee & code philadelphia.</p>
-          
+
             <div class="space">
                 <div>
                     <p>people come here to build, connect with other builders, and share their wisdom.</p>
-                    <p>come with a laptop, and we'll provide space for a few hours of building and snacks. </p>
+                    <p>come with a laptop, and we'll provide space for a few hours of building and snacks.</p>
                 </div>
                 <div class="hide-mobile" style="width: 45%;">
-                    <img src="cover.png">
+                    <img src="cover.png" />
                 </div>
             </div>
-             
 
+            <p>
+                we are a group of young engineers, programmers, artists, researchers, founders and everything in between. this isn't a place for credentials or prestige, it's a place to build. if you're passionate about what you're working
+                on, we'd love for you to join us :)
+            </p>
             <p>we encourage you to explore and work on a new interest, and share your ideas it with others.</p>
             <p id="rsvp">rsvp for our next event this saturday at 1:00pm - 4:30pm.</p>
             <p>be there or be square.</p>
@@ -112,37 +165,35 @@
             </div>
 
             <p class="fin">
-                your hosts, <br>
+                your hosts, <br />
                 - <a href="https://vivime.info" target="_blank">vish</a> & <a href="https://github.com/Tony363" target="_blank">tony</a>
-                <br>
+                <br />
                 <span style="user-select: none;">
-                    <br>
-                    coffee & code philadelphia is a node of <a href="https://socratica.info" target="_blank">socratica</a> <br>
+                    <br />
+                    coffee & code philadelphia is a node of <a href="https://socratica.info" target="_blank">socratica</a> <br />
                     site inspired by <a href="https://saturdays.rsvp/" target="_blank">saturdays @ uw</a> ❤️
                 </span>
             </p>
         </content>
         <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
+            document.addEventListener("DOMContentLoaded", (event) => {
                 const now = new Date();
-                const next = (now.getDay() === 6 && now.getHours() >= 17) ? 7 : (6 - now.getDay() + 7) % 7;
-                document.getElementById("rsvp").innerText = `rsvp for our next event on Sat, ${new Date(now.setDate(now.getDate() + next)).getMonth() + 1}/${now.getDate()}  at 1:00pm - 4:30pm.`
+                const next = now.getDay() === 6 && now.getHours() >= 17 ? 7 : (6 - now.getDay() + 7) % 7;
+                document.getElementById("rsvp").innerText = `rsvp for our next event on Sat, ${new Date(now.setDate(now.getDate() + next)).getMonth() + 1}/${now.getDate()}  at 1:00pm - 4:30pm.`;
 
-
-                const title = document.getElementById('title');
+                const title = document.getElementById("title");
                 const text = title.textContent;
-                title.innerHTML = '';
+                title.innerHTML = "";
                 for (let i = 0; i < text.length; i++) {
-                    const span = document.createElement('span');
+                    const span = document.createElement("span");
                     span.textContent = text[i];
                     if (text[i] == " ") {
-                        span.textContent = " "
+                        span.textContent = " ";
                     }
                     span.style.animationDelay = `${i * 0.1}s`;
                     title.appendChild(span);
                 }
-
             });
-            </script>
+        </script>
     </body>
 </html>
