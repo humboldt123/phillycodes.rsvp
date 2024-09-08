@@ -1,0 +1,73 @@
+:root {
+    --rhythm: 1.4rem;
+    --line-length: 40rem;
+}
+
+html {
+    line-height: var(--rhythm);
+}
+
+navbar {
+    padding-bottom: 2em !important;
+}
+
+content {
+    display: block;
+    overflow: hidden;
+
+    max-width: min(calc(100vw - (2 * var(--rhythm))), var(--line-length));
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+content h1 {
+    margin-top: calc(var(--rhythm) * 1.5);
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    border: 2px solid var(--greyen);
+    border-radius: 1em;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s;
+    cursor: pointer;
+    /* todo, shadow */
+}
+
+/* silly */
+.doodle { 
+    image-rendering: pixelated; 
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+    border: none;
+}
+
+img:hover { transform: perspective(1000px) rotateY(10deg); }
+
+content:before {
+    --size: 45px;
+    --line: color-mix(in lch, var(--dreary), transparent 80%);
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    background: linear-gradient(
+        270deg,
+        var(--line) 1px,
+        transparent 1px var(--size)
+    ) 50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
+    var(--size) var(--size);
+    mask: linear-gradient(20deg, transparent 45%, white);
+
+    top: 0;
+    left: 0;
+    transform-style: flat;
+    pointer-events: none;
+    z-index: 0;
+}

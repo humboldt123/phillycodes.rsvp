@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lisu+Bosa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+:root {
+    --bright: #fefefe;
+    --overcast: #f0f0f0;
+
+    
+    --papyrus: #f7ede0;
+
+	--dark: #212121;
+    --midnight: #121212;
+    --darksky: #010101;
+    
+    --dreary: #7e7e73;
+    
+    --darken: #0a0a0a90;
+    --greyen: #8784a311;
+    --lighten: #ffffff16;
+    
+    --overcasty: #f0f0f0d8;
+    --accentify: #e83b3bbc;
+
+    --selection: lightblue;
+	--accent: #e83b3b;
+	--accent-alt: #ae2334;
+
+    --dark-accent: #a5d8ff;
+    --dark-accent-alt: #339af0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Averia Sans Libre', sans-serif;
+}
+
+/* overrides */
+a { color: var(--accent); text-decoration: underline 1px dotted; }
+a:hover { text-decoration: underline 1px; }
+::selection { background-color: var(--selection); }
+img { user-select: none; }
+
+/* themes */
+.day { background-color: var(--bright); color: var(--dark); }
+.overcast { background-color: var(--overcast); color: var(--dark); }
+.papyrus { background-color: var(--papyrus); color: var(--dark); }
+
+.night { background-color: var(--dark); color: var(--bright); }
+.midnight { background-color: var(--midnight); color: var(--bright); }
+.darksky { background-color: var(--darksky); color: var(--overcast); }
+
+/* styles */
+.serif { font-family: 'Lisu Bosa', serif; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.no-select { user-select: none; }
+.no-pointer { pointer-events: none; }
+.center {text-align: center;}
+
+/* mobile */
+@media (max-width: 600px) {
+    .hide-mobile { display: none; }
+}
