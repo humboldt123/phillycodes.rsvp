@@ -14,126 +14,6 @@
         <link rel="stylesheet" href="./global.css" />
         <link rel="stylesheet" href="./style.css" />
     </head>
-    <style>
-        content {
-            padding-bottom: 2em;
-        }
-        #title {
-            padding-top: 0.5em;
-            display: inline-block;
-            line-height: 1em;
-            text-align: center;
-        }
-        #title span {
-            display: inline-block;
-            animation: bounce 0.3s ease forwards;
-            opacity: 0;
-        }
-        #subtitle {
-            font-size: small;
-            transition: color 0.2s ease-in-out;
-            cursor: pointer;
-        }
-        #subtitle:hover {
-            color: var(--accentify);
-        }
-
-        @keyframes bounce {
-            0% {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            50% {
-                transform: translateY(-5px);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        hr {
-            opacity: 0.3;
-            border-style: dashed;
-            margin: 1em 0 1.5em 0;
-        }
-        p {
-            margin-top: 0.6em;
-            margin-bottom: 0.6em;
-            font-size: larger;
-        }
-        .fin {
-            color: var(--dreary);
-        }
-        .fin a {
-            color: var(--dreary);
-        }
-
-        /* caption */
-        .caption {
-            margin-top: 0;
-            margin-left: 0.65em;
-            user-select: none;
-        }
-        .space > div > .caption {
-            text-align: center;
-        }
-
-        /* a.button */
-        .button {
-            display: flex;
-            width: 12em;
-            justify-content: center;
-            margin: auto;
-        }
-        .button > a {
-            transition-property: transform;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 0.15s;
-
-            font-size: 1.5rem;
-            line-height: 2rem;
-
-            padding: 0.5rem 2rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-
-            background-color: var(--bright);
-            color: var(--dark);
-            text-decoration: none;
-            border-radius: 0.5rem;
-            user-select: none;
-        }
-
-        .button:not(:hover) > a {
-            transform: translateY(0);
-        }
-        .button:hover > a {
-            transform: translate(0, -8px);
-            text-decoration: none;
-        }
-
-        /* more fun image interactivity */
-        div:nth-child(odd):hover > img {
-            transform: perspective(1000px) rotateY(-10deg);
-        }
-        div:nth-child(even):hover > img {
-            transform: perspective(1000px) rotateY(10deg);
-        }
-
-        @media all and (min-width: 800px) {
-            .space {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-            .space > div {
-                margin: 0 0%;
-                width: 50%;
-            }
-        }
-    </style>
     <body class="midnight">
         <content>
             <h1 id="title">Coffee & Code Philly ⁂</h1>
@@ -144,7 +24,7 @@
 
             <div class="space">
                 <div>
-                    <p>we are a diverse group of engineers, designers, founders, and everything in between, coming together on weekends to <u>hang out and build</u>.</p>
+                    <p>we are a group of engineers, designers, founders, and everything in between, coming together on weekends to <u>hang out and build</u>.</p>
                     <p>just bring your laptop. you'll get the space for a few hours of work. plus, there's coffee.</p>
                 </div>
                 <div class="hide-mobile" style="width: 45%;">
@@ -158,8 +38,10 @@
             <p>be there or be square.</p>
 
             <div class="button serif">
-                <a href="https://lu.ma/fyfrkhk6">RSVP :D</a>
+                <a href="https://lu.ma/event/evt-XNeegENfp4mhSTF" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="evt-XNeegENfp4mhSTF">RSVP</a>
             </div>
+          
+          <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 
             <p class="fin">
                 your hosts, <br />
