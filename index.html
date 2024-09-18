@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>coffee & code ⁂</title>
+        <title>coffee & code</title>
         <meta charset="utf-8" />
-        <meta name="title" content="coffee & code ⁂" />
-        <meta name="description" content="SOCRATICA Chapter of Philadelphia" />
+        <meta name="title" content="coffee & code" />
+        <meta name="description" content="Your space to build." />
         <meta name="theme-color" content="#e83b3b" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -12,67 +12,31 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
 
         <link rel="stylesheet" href="./global.css" />
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./index.css" />
     </head>
-    <body class="midnight">
-        <content>
-            <h1 id="title">Coffee & Code Philly ⁂</h1>
-            <p id="subtitle" class="mono">📍 Capital One Café (35 S 17th St Suite A)</p>
-            <hr />
-
-            <p>welcome to coffee & code philadelphia.</p>
-
-            <div class="space">
-                <div>
-                    <p>we are a group of engineers, designers, founders, and everything in between, coming together on weekends to <u>hang out and build</u>.</p>
-                    <p>just bring your laptop. you'll get the space for a few hours of work. plus, there's coffee.</p>
-                </div>
-                <div class="hide-mobile" style="width: 45%;">
-                    <img src="cover.png" />
+    <body>
+        <section id="main" class="pure-g">
+            <div class="pure-u-1-8"> <!-- info: formatting div --> </div>
+            <div class="pure-u-md-1-3" style="background-color: rebeccapurple;">
+                <div id="hero-container">
+                    <img src="/media/hero/DSC00023.JPG">
+                    <img src="/media/hero/DSC00066.JPG">
+                    <img src="/media/hero/IMGP0603.JPG">
                 </div>
             </div>
-            
-            <p>we encourage you to explore and work on a new interest, and share your ideas it with others.</p>
-            <p>if you're passionate about what you're working on, and want to build around others, we'd love for you to join us :)</p>
-            <p id="rsvp">rsvp for our next event this saturday at 1:00pm - 4:30pm.</p>
-            <p>be there or be square.</p>
-
-            <div class="button serif">
-                <a href="https://lu.ma/event/evt-3xpGQg3Iv7DrxPX" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="evt-3xpGQg3Iv7DrxPX">RSVP</a>
+            <div class="pure-u-1-12"> <!-- info: formatting div --> </div>
+            <div class="pure-u-md-1-3" style="background-color: red;">
+                <p>
+                    a group of programmers, designers, creatives,<br>
+                    and everyone in between, coming together<br>
+                    on saturdays to build together.
+                </p>
+                <p>
+                    📍 Philadelphia, PA
+                </p>
             </div>
-          
-          <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
-
-            <p class="fin">
-                your hosts, <br />
-                - <a href="https://vivime.info" target="_blank">vish</a>, <a href="https://hartwell.netlify.app/" target="_blank">eve</a> & <a href="https://github.com/Tony363" target="_blank">tony</a>
-                <br />
-                <span style="user-select: none;">
-                    <br />
-                    coffee & code philadelphia is a node of <a href="https://socratica.info" target="_blank">socratica</a> <br />
-                    site inspired by <a href="https://saturdays.rsvp/" target="_blank">saturdays @ uw</a> ❤️
-                </span>
-            </p>
-        </content>
-        <script>
-            document.addEventListener("DOMContentLoaded", (event) => {
-                const now = new Date();
-                const next = now.getDay() === 6 && now.getHours() >= 17 ? 7 : (6 - now.getDay() + 7) % 7;
-                document.getElementById("rsvp").innerText = `rsvp for our next event on Sat, ${new Date(now.setDate(now.getDate() + next)).getMonth() + 1}/${now.getDate()}  at 1:00pm - 4:30pm.`;
-
-                const title = document.getElementById("title");
-                const text = title.textContent;
-                title.innerHTML = "";
-                for (let i = 0; i < text.length; i++) {
-                    const span = document.createElement("span");
-                    span.textContent = text[i];
-                    if (text[i] == " ") {
-                        span.textContent = " ";
-                    }
-                    span.style.animationDelay = `${i * 0.1}s`;
-                    title.appendChild(span);
-                }
-            });
-        </script>
+            <div class="pure-u-1-8"> <!-- info: formatting div --> </div>
+        </section>
+        </section>
     </body>
 </html>
