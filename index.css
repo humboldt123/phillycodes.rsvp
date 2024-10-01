@@ -1,3 +1,22 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px 0px 60px;
+    overflow: hidden;
+}
+
+
+header #logo img {
+    width: 75px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 30px;
+    user-select: none;
+}
+
 #main:before {
     --size: 45px;
     --line: color-mix(in lch, var(--gridlines), transparent 80%);
@@ -17,15 +36,12 @@
 }
 
 #hero-container {
-    position: relative;
-    height: 600px;
+    height: 500px;
 }
 
 #hero-container img {
     width: 38vh;
     aspect-ratio: 1.6;
-
-    position: absolute;
     
     object-fit: cover;
     
@@ -39,15 +55,35 @@
 }
 
 #hero-container img:nth-child(1) {
-    top: 10vh;
-    transform: rotate(-15deg);
+    transform: rotate(-15deg) translateX(15%) translateY(70%);
 }
 #hero-container img:nth-child(2) {
-    top: 25vh;
-    left: 8vh;
-    transform: rotate(-5deg);
+    transform: rotate(-5deg) translateX(35%) translateY(10%);
 }
 #hero-container img:nth-child(3) {
-    top: 40vh;
-    transform: rotate(8.25deg); 
+    transform: rotate(8.25deg) translateX(20%) translateY(-55%);
+}
+
+#splash {
+    margin-top: 45%;
+    margin-right: 20%;
+}
+
+#splash h1 { text-align: right; }
+#splash p { text-align: right; }
+#splash .button { justify-content: flex-end; }
+
+/* mobile considerations */
+
+@media all and (max-width: 600px) {
+    header { padding: 5px 20px 0px 20px; }
+    header #logo img { width: 50px; padding-top: 2px;}
+    header h1 { font-size: 24px; padding-top: 10px; margin: 0; }
+
+    #hero-container img { width: 32vh; }
+
+    #splash { margin: 0; }
+    #splash h1 { text-align: center; }
+    #splash p { text-align: center; }
+    #splash .button { justify-content: center; }
 }
