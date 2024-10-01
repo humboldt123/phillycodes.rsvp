@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 :root {
     --background: #E9E3DC;
@@ -49,6 +50,7 @@ img { user-select: none; }
 .contrast { color: var(--contrast-text); }
 .serif { font-family: 'Vollkorn', serif; }
 .mono { font-family: 'Space Mono', monospace; }
+.handwriting { font-family: 'Gloria Hallelujah', sans-serif;}
 
 .text-left { text-align: left; }
 .text-center { text-align: center; }
