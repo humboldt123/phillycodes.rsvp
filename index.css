@@ -68,13 +68,12 @@ header h1 {
 }
 
 #splash {
-    margin-top: 40%;
-    margin-right: 20%;
+    margin-top: 30%;
 }
 
-#splash h1 { text-align: right;  font-size: xx-large;}
-#splash p { text-align: right;  font-size: large;}
-#splash .button { justify-content: flex-end; font-size: large;}
+#splash h1 { text-align: right; }
+#splash p { text-align: right; }
+#splash .button { justify-content: flex-end; }
 
 
 .point {
@@ -100,10 +99,17 @@ header h1 {
 .tag {
     background-image: url('/media/gizmo/tag.svg');
     background-repeat: no-repeat;
-    background-clip: ;
     width: 64px;
     height: 40px;
 }
+
+/* for desktop only */
+@media screen and (min-width: 600px) {
+    #splash h1 { font-size: xx-large;}
+    #splash p { font-size: large;}
+    #splash .button { font-size: large;}
+}
+
 
 /* mobile considerations */
 
@@ -113,6 +119,8 @@ header h1 {
     header h1 { font-size: 24px; padding-top: 10px; margin: 0; }
 
     #hero-container img { width: 32vh; } /* height: 500px; */
+
+    #attention-line { display: none; }
 
     #splash { margin: 0; }
     #splash h1 { text-align: center; }
