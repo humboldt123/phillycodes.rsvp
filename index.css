@@ -17,6 +17,8 @@ header h1 {
     user-select: none;
 }
 
+/* todo animated */
+
 #main:before {
     --size: 45px;
     --line: color-mix(in lch, var(--gridlines), transparent 80%);
@@ -52,6 +54,7 @@ header h1 {
     transition: transform 0.3s;
 
     filter: drop-shadow(-4px 8px 3px #00000022);
+    /*todo:more shaodw*/
 }
 
 #hero-container img:nth-child(1) {
@@ -65,13 +68,42 @@ header h1 {
 }
 
 #splash {
-    margin-top: 45%;
+    margin-top: 40%;
     margin-right: 20%;
 }
 
-#splash h1 { text-align: right; }
-#splash p { text-align: right; }
-#splash .button { justify-content: flex-end; }
+#splash h1 { text-align: right;  font-size: xx-large;}
+#splash p { text-align: right;  font-size: large;}
+#splash .button { justify-content: flex-end; font-size: large;}
+
+
+.point {
+    font-size: large;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.card-container {}
+.card {
+    font-family: 'Gloria Hallelujah', sans-serif;
+    background-image: url('/media/gizmo/box.svg');
+    background-repeat: no-repeat;
+
+    width: 425px;
+    height: 244px;
+    
+
+    background-color: rebeccapurple;
+}
+.tag-container {}
+
+.tag {
+    background-image: url('/media/gizmo/tag.svg');
+    background-repeat: no-repeat;
+    background-clip: ;
+    width: 64px;
+    height: 40px;
+}
 
 /* mobile considerations */
 

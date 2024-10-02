@@ -50,7 +50,7 @@ img { user-select: none; }
 .contrast { color: var(--contrast-text); }
 .serif { font-family: 'Vollkorn', serif; }
 .mono { font-family: 'Space Mono', monospace; }
-.handwriting { font-family: 'Gloria Hallelujah', sans-serif;}
+.handwriting { font-family: 'Gloria Hallelujah', sans-serif; }
 
 .text-left { text-align: left; }
 .text-center { text-align: center; }
