@@ -82,25 +82,115 @@ header h1 {
     margin-bottom: 5em;
 }
 
-.card-container {}
+.blur-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px auto;
+}
+
+.blur-left,
+.blur-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+}
+
+.blur-left {
+    width: 60px;
+  left: 0px;
+  background: radial-gradient(farthest-side at -30%,
+  var(--background), 
+  rgba(0,0,0,0)
+  );
+  backdrop-filter: blur(0.5px);
+}
+
+.blur-right {
+  right: 0px;
+  background: radial-gradient(circle farthest-side at 180%, var(--background), rgba(0,0,0,0)n 80% );
+  backdrop-filter: blur(2px);
+}
+
+@supports (position: sticky) {
+    @media (min-height: 0px) {
+      *:not(:root):not(:is(html, body)):not(:hover) {
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        background-color: red;
+      }
+    }
+  }
+
+.card {
+    scroll-margin: 1px 0;
+  }
+  
+  .card-scroll {
+    scroll-snap-type: x proximity;
+    overflow-x: scroll;
+  }
+
+.card-scroll {
+    display: flex;
+    overflow: scroll;
+    flex-direction: row;
+    scroll-snap-align: 3em;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    box-sizing: border-box;
+}
+
 .card {
     font-family: 'Gloria Hallelujah', sans-serif;
     background-image: url('/media/gizmo/box.svg');
     background-repeat: no-repeat;
-
+    aspect-ratio: 425 / 250;
     width: 425px;
     height: 244px;
-    
-
-    background-color: rebeccapurple;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
-.tag-container {}
+
+.card > h2 {
+    margin-left: 1.5em;
+}
+
+.card > p {
+    margin-left: 1.5em;
+}
+.card > div {
+    margin-left: 1.5em;
+}
+
+.card > a {
+    width: 28px;
+    margin-top: 1em;
+    margin-right: 1.5em;
+    margin-left: auto;
+}
+
+.tag-container {
+    display: flex;
+    flex-direction: row;
+}
 
 .tag {
     background-image: url('/media/gizmo/tag.svg');
     background-repeat: no-repeat;
     width: 64px;
-    height: 40px;
+    height: 36px;
+    margin: 5px;
+}
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* for desktop only */
@@ -108,6 +198,9 @@ header h1 {
     #splash h1 { font-size: xx-large;}
     #splash p { font-size: large;}
     #splash .button { font-size: large;}
+    #attention-line { margin-top: 3em; margin-bottom: 3em;}
+    #work {font-size: xx-large;}
+    .card-scroll { padding-bottom: 10em;}
 }
 
 
@@ -126,4 +219,7 @@ header h1 {
     #splash h1 { text-align: center; }
     #splash p { text-align: center; }
     #splash .button { justify-content: center; }
+
+    .card { width: 300px; height: 172px; }
+    .tag-container { display: none; }
 }
