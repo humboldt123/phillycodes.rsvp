@@ -1,0 +1,129 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px 0px 60px;
+    overflow: hidden;
+}
+
+
+header #logo img {
+    width: 75px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 30px;
+    user-select: none;
+}
+
+/* todo animated */
+
+#main:before {
+    --size: 45px;
+    --line: color-mix(in lch, var(--gridlines), transparent 80%);
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: 
+        linear-gradient(90deg, var(--line) 1px, transparent 1px var(--size) ) 50% 50% / var(--size) var(--size),
+        linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% / var(--size) var(--size);
+    mask: linear-gradient(20deg, transparent 50%, white);
+    top: 0;
+    left: 0;
+    transform-style: flat;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#hero-container {
+    height: 40%;
+}
+
+#hero-container img {
+    width: 38vh;
+    aspect-ratio: 1.6;
+    
+    object-fit: cover;
+    
+    border: 1px solid var(--hero-border);
+    border-radius: 0.75em;
+    
+    transform: perspective(1000px);
+    transition: transform 0.3s;
+
+    filter: drop-shadow(-4px 8px 3px #00000022);
+    /*todo:more shaodw*/
+}
+
+#hero-container img:nth-child(1) {
+    transform: rotate(-15deg) translateX(15%) translateY(70%);
+}
+#hero-container img:nth-child(2) {
+    transform: rotate(-5deg) translateX(35%) translateY(10%);
+}
+#hero-container img:nth-child(3) {
+    transform: rotate(8.25deg) translateX(20%) translateY(-55%);
+}
+
+#splash {
+    margin-top: 30%;
+}
+
+#splash h1 { text-align: right; }
+#splash p { text-align: right; }
+#splash .button { justify-content: flex-end; }
+
+
+.point {
+    font-size: large;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.card-container {}
+.card {
+    font-family: 'Gloria Hallelujah', sans-serif;
+    background-image: url('/media/gizmo/box.svg');
+    background-repeat: no-repeat;
+
+    width: 425px;
+    height: 244px;
+    
+
+    background-color: rebeccapurple;
+}
+.tag-container {}
+
+.tag {
+    background-image: url('/media/gizmo/tag.svg');
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 40px;
+}
+
+/* for desktop only */
+@media screen and (min-width: 600px) {
+    #splash h1 { font-size: xx-large;}
+    #splash p { font-size: large;}
+    #splash .button { font-size: large;}
+}
+
+
+/* mobile considerations */
+
+@media all and (max-width: 600px) {
+    header { padding: 5px 20px 0px 20px; }
+    header #logo img { width: 50px; padding-top: 2px;}
+    header h1 { font-size: 24px; padding-top: 10px; margin: 0; }
+
+    #hero-container img { width: 32vh; } /* height: 500px; */
+
+    #attention-line { display: none; }
+
+    #splash { margin: 0; }
+    #splash h1 { text-align: center; }
+    #splash p { text-align: center; }
+    #splash .button { justify-content: center; }
+}
