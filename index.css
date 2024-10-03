@@ -17,8 +17,6 @@ header h1 {
     user-select: none;
 }
 
-/* todo animated */
-
 #main:before {
     --size: 45px;
     --line: color-mix(in lch, var(--gridlines), transparent 80%);
@@ -36,26 +34,38 @@ header h1 {
     pointer-events: none;
     z-index: 0;
 }
+#main {margin-bottom: 12vh;}
 
-#hero-container {
-    height: 40%;
+
+#hero-container { height: 40%;}
+
+.point img {
+    max-width: 100%;
+    object-fit: cover;
+    border: 2px solid var(--greyen);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s;
+    cursor: pointer;
 }
+.point img:hover { transform: perspective(1000px) rotateY(10deg); }
 
 #hero-container img {
     width: 38vh;
     aspect-ratio: 1.6;
+
     
     object-fit: cover;
     
     border: 1px solid var(--hero-border);
     border-radius: 0.75em;
     
-    transform: perspective(1000px);
+    transform: perspective(1000px) rotateY(0deg);;
     transition: transform 0.3s;
 
-    filter: drop-shadow(-4px 8px 3px #00000022);
-    /*todo:more shaodw*/
+    filter: drop-shadow(-4px 8px 3px #00000044);
 }
+
+#hero-container img:hover { transform: perspective(1000px) rotateY(10deg); }
 
 #hero-container img:nth-child(1) {
     transform: rotate(-15deg) translateX(15%) translateY(70%);
@@ -78,70 +88,49 @@ header h1 {
 
 .point {
     font-size: large;
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 5em;
 }
+.point > p {margin-top: 2em;}
 
-.blur-container {
-    position: relative;
+
+.evil-container {
     width: 100%;
-    overflow-x: auto;
-    margin: 20px auto;
+    position: relative;
 }
 
-.blur-left,
-.blur-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 120px;
-  pointer-events: none;
+.evil-container::before {
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    z-index: 1;
+    mask-image: linear-gradient(to right, black 0%, transparent 5%, transparent 90%,black 100%);
+    backdrop-filter: blur(1px);
+    background: linear-gradient(
+        90deg,
+        var(--background),
+        transparent 10%,
+        transparent 90%,
+        var(--background)
+    );
+    inset: 0;
 }
 
-.blur-left {
-    width: 60px;
-  left: 0px;
-  background: radial-gradient(farthest-side at -30%,
-  var(--background), 
-  rgba(0,0,0,0)
-  );
-  backdrop-filter: blur(0.5px);
-}
-
-.blur-right {
-  right: 0px;
-  background: radial-gradient(circle farthest-side at 180%, var(--background), rgba(0,0,0,0)n 80% );
-  backdrop-filter: blur(2px);
-}
-
-@supports (position: sticky) {
-    @media (min-height: 0px) {
-      *:not(:root):not(:is(html, body)):not(:hover) {
-        position: sticky;
-        top: 0;
-        bottom: 0;
-        background-color: red;
-      }
-    }
-  }
-
-.card {
-    scroll-margin: 1px 0;
-  }
-  
-  .card-scroll {
-    scroll-snap-type: x proximity;
-    overflow-x: scroll;
-  }
-
-.card-scroll {
+.card-container {
     display: flex;
+    white-space: nowrap;
+    align-items: center;
+    width: 100%;
+
     overflow: scroll;
-    flex-direction: row;
-    scroll-snap-align: 3em;
-    scroll-behavior: smooth;
+    scroll-snap-align: center;
     scrollbar-width: none;
-    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 9;
 }
 
 .card {
@@ -154,6 +143,9 @@ header h1 {
     margin: 20px;
     display: flex;
     flex-direction: column;
+    scroll-snap-align: center;
+
+    transition: transform 0.1s;
 }
 
 .card > h2 {
@@ -193,20 +185,63 @@ header h1 {
     align-items: center;
 }
 
+
+#projects {
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+}
+
+.footer-text {
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: x-large;
+}
+#footer-buttons {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#footer-buttons .button {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+.hero-button {
+    margin-left: auto;
+}
+
 /* for desktop only */
 @media screen and (min-width: 600px) {
     #splash h1 { font-size: xx-large;}
     #splash p { font-size: large;}
     #splash .button { font-size: large;}
-    #attention-line { margin-top: 3em; margin-bottom: 3em;}
+    #attention-line { margin-top: 3em;}
     #work {font-size: xx-large;}
-    .card-scroll { padding-bottom: 10em;}
+    .card-container { padding-bottom: 10em;}
+    .footer-text {
+        padding-left: 3em;
+        padding-right: 3em;
+    
+    }
+    #footer-buttons {
+        padding-left: 3em;
+        padding-right: 3em;
+    
+    }
+    #bottom-rsvp::after {content: " <3"}
+    #instagram::before {content: "Follow Our "}
+    #instagram::after {content: "gram"}
 }
-
 
 /* mobile considerations */
 
 @media all and (max-width: 600px) {
+    .hero-button {
+        margin-right: auto;
+    }
     header { padding: 5px 20px 0px 20px; }
     header #logo img { width: 50px; padding-top: 2px;}
     header h1 { font-size: 24px; padding-top: 10px; margin: 0; }
@@ -220,6 +255,21 @@ header h1 {
     #splash p { text-align: center; }
     #splash .button { justify-content: center; }
 
+    .point {margin-left: 3em; margin-right: 3em;}
+
     .card { width: 300px; height: 172px; }
     .tag-container { display: none; }
+
+    #projects {padding-top: 3vh;}
+    #footer {padding-top: 3vh;}
+    #true-footer {padding-top: 8vh;}
+    .hide-mobile {
+        display: none;
+    }
+    #footer-buttons {
+        padding-top: 3em;
+    }
+
+    
+
 }

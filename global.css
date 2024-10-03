@@ -64,7 +64,7 @@ img { user-select: none; }
 /* a.button */
 .button {
     display: flex;
-    margin-left: auto;
+    width: fit-content;
 }
 .button > a {
     transition-property: transform;
