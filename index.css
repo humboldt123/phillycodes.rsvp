@@ -8,12 +8,12 @@ header {
 
 
 header #logo img {
-    width: 75px;
+    width: 60px;
     height: auto;
 }
 
 header h1 {
-    font-size: 30px;
+    font-size: 25px;
     user-select: none;
 }
 
@@ -50,7 +50,7 @@ header h1 {
 .point img:hover { transform: perspective(1000px) rotateY(10deg); }
 
 #hero-container img {
-    width: 38vh;
+    width: 45vh;
     aspect-ratio: 1.6;
 
     
@@ -81,13 +81,13 @@ header h1 {
     margin-top: 30%;
 }
 
-#splash h1 { text-align: right; }
-#splash p { text-align: right; }
+#splash h1 { text-align: right; font-weight: 300; }
+#splash p { text-align: right; margin-top: 2rem;}
 #splash .button { justify-content: flex-end; }
 
 
 .point {
-    font-size: large;
+    font-size: larger;
     margin-top: 3em;
     margin-bottom: 5em;
 }
@@ -216,7 +216,6 @@ header h1 {
 /* for desktop only */
 @media screen and (min-width: 600px) {
     #splash h1 { font-size: xx-large;}
-    #splash p { font-size: large;}
     #splash .button { font-size: large;}
     #attention-line { margin-top: 3em;}
     #work {font-size: xx-large;}

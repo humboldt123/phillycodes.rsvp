@@ -24,7 +24,7 @@
 
 
     --selection: lightblue;
-    --link: #e83b3b;
+    --link: #278a93;
     
     --hero-border: #7E7E7E;
 }
@@ -43,6 +43,7 @@ a { color: var(--link); text-decoration: underline 1px dotted; }
 a:hover {  text-decoration: underline 2px; }
 ::selection { background-color: var(--selection); }
 img { user-select: none; }
+p { line-height: 1.5rem; }
 
 /* styles */
 .serious { color: var(--serious-text); }
