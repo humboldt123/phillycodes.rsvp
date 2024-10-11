@@ -65,7 +65,6 @@ p { line-height: 1.5rem; }
 /* a.button */
 .button {
     display: flex;
-    width: fit-content;
 }
 .button > a {
     transition-property: transform;
